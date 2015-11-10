@@ -57,13 +57,13 @@ namespace FirstIterationVMC.Models
 
         //State
         [Required]
-        [RegularExpression(@"^[A-Z\s]{2}$")]
+        [RegularExpression(@"^[A-Z\s]{2}$", ErrorMessage ="Entered format isn't valid. PLease use FL format")]
         [StringLength(2)]
         public string State { get; set; }
 
         //zip
         [Required]
-        [RegularExpression(@"^(\d{5})$")]
+        [RegularExpression(@"^(\d{5})$", ErrorMessage = "Entered data isn't valid. Use 99999 format")]
         [StringLength(5)]
         public string Zip { get; set; }
 
